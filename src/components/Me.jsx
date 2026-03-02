@@ -1,7 +1,6 @@
 import Social from "./Social";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { buttonVariants } from "./ui/button";
-import MeImg from "/public/me.jpg";
 import Link from "next/link";
 
 export default function Me() {
@@ -11,9 +10,13 @@ export default function Me() {
         <div>
           <div className="flex flex-col items-center mb-5 gap-3 sm:gap-6 sm:flex-row">
             <Avatar className="w-[100px] h-[100px] aspect-square object-cover sm:w-[170px] sm:h-[170px] sm:shadow-sm animate-slide-top">
-              <AvatarImage src={MeImg.src} alt="Abdulloh Nurmukhammedov" />
+              
+              {/* ✅ TO‘G‘RILANGAN QISM */}
+              <AvatarImage src="/me.jpg" alt="Abdulloh Nurmukhammedov" />
+              
               <AvatarFallback className="text-5xl">A</AvatarFallback>
             </Avatar>
+
             <div className="flex flex-col text-center items-center sm:text-left sm:items-start animate-slide-top delay-300">
               <h2 className="text-2xl font-medium mb-1 sm:text-4xl">
                 Abdulloh Nurmukhammedov
@@ -24,6 +27,7 @@ export default function Me() {
               <Social />
             </div>
           </div>
+
           <div className="flex flex-col items-center text-center sm:text-left sm:items-start sm:max-w-96">
             <p className="mb-5 sm:text-lg animate-slide-top delay-600">
               Yillar davomida tinchlik bermagan{" "}
@@ -32,6 +36,7 @@ export default function Me() {
               <span className="underline font-medium">hal qilishimga</span>{" "}
               ishonasizmi?
             </p>
+
             <div className="flex gap-5">
               <Link
                 className={`${buttonVariants({
@@ -41,12 +46,13 @@ export default function Me() {
               >
                 Yechimlar
               </Link>
+
               <a
                 className={`${buttonVariants({
                   variant: "outline",
                 })} animate-slide-top delay-1200`}
                 target="_blank"
-                href="https://t.me/by_Stackflowx"
+                href="https://t.me/Stackflowx"
               >
                 Haqimda
               </a>
